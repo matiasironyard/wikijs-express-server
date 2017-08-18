@@ -14,7 +14,7 @@ app.get('/test', function(req, res){ // listens for request on /api route
 
 /* PUT YOUR CODE BETWEEN COMMENTS */
 
-app.get('/api', function(req, res){ // listens for request on /api route
+app.get('/swapi', function(req, res){ // listens for request on /api route
  console.log('test api!');
 
  var search = req.query.search;
