@@ -20,11 +20,7 @@
     "node-yelp-fusion": "^1.0.4 ",
     "npm": "^3.8.0",
     "request": "^2.69.0",
-    "wikijs": "^4.0.0",
-    "yelp": "^1.0.1",
-    "yelp-api-v3": "^1.5.0",
-    "yelp-fusion": "^1.0.3",
-    "yelpv3": "^1.2.1"
+    "wikijs": "^4.0.0"
   },
   "keywords": [
     "node",
