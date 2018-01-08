@@ -14,30 +14,15 @@ app.get('/test', function(req, res){ // listens for request on /api route
 
 /* PUT YOUR CODE BETWEEN COMMENTS */
 
-app.get('/swapi', function(req, res){ // listens for request on /api route
- console.log('test api!');
- 
-  request('https://api.hubapi.com/content/api/v2/blog-posts?hapikey=65b8decf-66bc-43bf-91db-3d862cccc152&state=published', function (error, response, body) { // api url
+app.get('/api', function(req, res){ // listens for request on /api route
+
+ request('https://api.hubapi.com/content/api/v2/blog-posts?hapikey=65b8decf-66bc-43bf-91db-3d862cccc152&state=published', function (error, response, body) { // api url
  if (!error && response.statusCode === 200) {
        console.log('received', response, body);
       res.send(body); // if no errors, send the body of data back to front end
     }
-  });
-
-
-app.get('/hubspot', function(req, res){ // listens for request on /api route
- console.log('test api!');
-
- var search = req.query.search;
- console.log(search)
-
- wiki().page(search)
-     .then(page => page.mainImage())
-     .then(data => res.send(data)).catch(console.error)
-});
-
-
-
+   });
+ });
 
 
 /* PUT YOUR CODE ABOVE THIS COMMENT */
@@ -53,9 +38,10 @@ console.log('Server running on port 3000');
 //   var lat = req.query.lat; // grabs lat and lng queries from the request object
 //   var lng = req.query.lng;
 //   request('https://api.brewerydb.com/v2/search/geo/point?lat=' + lat + '&lng=' + lng + '&type=beer&hasImages=Y&key=72a751214ab8b53056ac0a6d8376dc2d', function (error, response, body) { // api url
-//     if (!error && response.statusCode === 200) {
-//       console.log('beer');
-//       res.send(body); // if no errors, send the body of data back to front end
-//     }
+//      request('https://api.hubapi.com/content/api/v2/blog-posts?hapikey=65b8decf-66bc-43bf-91db-3d862cccc152&state=published', function (error, response, body) { // api url
+ if (!error && response.statusCode === 200) {
+       console.log('received', response, body);
+      res.send(body); // if no errors, send the body of data back to front end
+    }
 //    });
 // });
